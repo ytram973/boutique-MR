@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Boutique MR</title>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Boutique MR</h1>
+
+    <div class="header-actions">
+      <a id="adminLink" class="btn" href="admin.html" style="display:none;">Admin</a>
+      <a id="accountLink" class="btn" href="login.html">Se connecter</a>
+      <a class="btn" id="cartBtn" href="cart.html">Panier</a>
+    </div>
+
+  </header>
+
+  <section id="carousel">
+    <h2>Home</h2>
+  </section>
+
+  <div class="category-bar">
+    <button class="btn category-btn" data-category="all" type="button">Tous</button>
+    <button class="btn category-btn" data-category="chaussure" type="button">Chaussures</button>
+    <button class="btn category-btn" data-category="vetement" type="button">Vêtements</button>
+  </div>
+
+  <h2>Products</h2>
+
+
+  <section class="products" id="products"></section>
+
+
+
+  <script type="module" src="js/index.js"></script>
+</body>
+
+</html>
