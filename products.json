@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": "aj4",
+      "name": "Air Jordan 4",
+      "price": 225.99,
+      "image": "images/Airjordan4.webp",
+      "description": "Sneaker iconique, confortable et stylée.",
+      "stock": 5,
+      "category": "chaussure"
+    },
+    {
+      "id": "aj1",
+      "name": "Air Jordan 1",
+      "price": 225.99,
+      "image": "images/Air-jordan-1.webp",
+      "description": "Classique intemporel.",
+      "stock": 3,
+      "category": "chaussure"
+    },
+    {
+      "id": "aj4flower",
+      "name": "Air Jordan 4",
+      "price": 240.99,
+      "image": "images/Flower.webp",
+      "description": "Sneaker iconique, confortable et stylée.",
+      "stock": 5,
+      "category": "chaussure"
+    },
+    {
+      "id": "aj2",
+      "name": "Air Jordan 1",
+      "price": 446.99,
+      "image": "images/Air_jordan_1_TS.avif",
+      "description": "Classique intemporel.",
+      "stock": 3,
+      "category": "chaussure"
+    },
+    {
+      "id": "aGGGGJ2",
+      "name": "Air Jordan 55",
+      "price": 446.99,
+      "image": "images/Air_jordan_1_TS.avif",
+      "description": "Classique intemporel.",
+      "stock": 3,
+      "category": "chaussure"
+    },
+    {
+      "id": "tee1",
+      "name": "Fear of GodR",
+      "price": 120,
+      "image": "images/Fear-of-God.webp",
+      "description": "Le modèle mesure 188 cm et porte une taille M. Cet article taille grand, nous vous recommandons de prendre une taille en dessous de votre taille habituelle pour une coupe plus ajustée.",
+      "stock": 10,
+      "category": "vetement"
+    }
+  ]
+}
