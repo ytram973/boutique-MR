@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin - Produits</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html" class="btn">← Boutique</a>
+    <h1>Admin Produits</h1>
+    <button class="btn" id="logoutBtn" type="button">Logout</button>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Ajouter / Modifier</h2>
+      <form id="productForm">
+        <input id="name" placeholder="Nom de l’article" />
+
+        <input id="id" placeholder="ID" />
+
+        <input id="price" type="number" step="0.01" min="0" placeholder="Prix" />
+
+        <input id="stock" type="number" min="0" step="1" placeholder="Nombre" />
+
+        <input id="description" placeholder="Description" />
+
+        <input id="image" placeholder="Chemin de l’image" />
+
+        <input id="category" placeholder="Catégorie (chaussure/vetement)" />
+
+        <div class="form-actions">
+          <button class="btn" id="resetBtn" type="button">Reset</button>
+          <button class="btn submit-btn" type="submit">Enregistrer</button>
+        </div>
+
+        <p id="msg" class="hint"></p>
+      </form>
+
+
+    </section>
+
+    <h2>Produits</h2>
+    <section id="adminProducts" class="products"></section>
+  </main>
+
+  <script type="module" src="js/admin.js"></script>
+</body>
+
+</html>
