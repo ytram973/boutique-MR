@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Connexion</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Connexion</h1>
+
+    <form id="loginForm" class="card">
+      <label>Email</label>
+      <input id="email" type="email" required placeholder="moi@email.com" />
+
+      <label>Mot de passe</label>
+      <input id="password" type="password" required placeholder="password123" />
+
+      <button type="submit">Se connecter</button>
+
+      <p class="hint">Démo admin : <b>admin@mr.com</b></p>
+      <p class="hint">Démo user : (n’importe quel email) / <b>password123</b></p>
+
+      <p id="error" class="error" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script type="module">
+    import { setSession, getSession } from "./js/auth.js";
+
+    // Si déjà connecté, on redirige directement vers la bonne page
+    const existing = getSession();
+    if (existing) {
+      window.location.href = existing.isAdmin ? "admin.html" : "account.html";
+    }
+
+    const form = document.getElementById("loginForm");
+    const email = document.getElementById("email");
+    const password = document.getElementById("password");
+    const error = document.getElementById("error");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      error.textContent = "";
+
+      const emailValue = email.value.trim().toLowerCase();
+      const passValue = password.value;
+
+      // Règles de démo 
+      const isAdmin = emailValue === "admin@mr.com" ;
+      const isUser = !!emailValue && passValue === "password123";
+
+      if (!emailValue) {
+        error.textContent = "Email requis.";
+        return;
+      }
+
+      // Si ni admin ni user -> refus
+      if (!isAdmin && !isUser) {
+        error.textContent = "Identifiants incorrects.";
+        return;
+      }
+
+      // On centralise la création de session via auth.js
+      setSession({ email: emailValue, isAdmin });
+
+      // Redirection selon le rôle
+      window.location.href = isAdmin ? "admin.html" : "account.html";
+    });
+  </script>
+</body>
+</html>
