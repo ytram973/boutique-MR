@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mon compte</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="container header">
+    <a class="btn" href="index.html">← Boutique</a>
+    <button id="logoutBtn" class="secondary">Se déconnecter</button>
+  </header>
+
+  <main class="container">
+    <h1>Mon compte</h1>
+    <div class="card">
+      <p>Connecté en tant que : <b id="userEmail"></b></p>
+      <p class="hint">Ajout prévu prochainement sur le site</p>
+    </div>
+  </main>
+
+  <script type="module">
+    import { requireAuth, clearSession } from "./js/auth.js";
+
+    const session = requireAuth();
+    if (session) {
+      document.getElementById("userEmail").textContent = session.email;
+    }
+    // Logout function et redirection vers la page d'accueil
+    document.getElementById("logoutBtn").addEventListener("click", () => {
+      clearSession();
+      window.location.href = "index.html";
+    });
+  </script>
+</body>
+</html>
