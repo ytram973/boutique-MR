@@ -24,6 +24,7 @@ body {
   padding: 16px 24px;
   background-color: #35424a;
   color: #ffffff;
+  margin-bottom: 30px;
 }
 
 /* Zone boutons du header (compte, admin, panier) */
@@ -50,12 +51,6 @@ button,
 /* =====================================================
    PAGE INDEX (Accueil)
    ===================================================== */
-
-/* Section "Home / Carousel" */
-#carousel {
-  background-color: aqua;
-  padding: 60px 24px;
-}
 
 /* Grille des produits (index.html + admin.html listing) */
 .products {
